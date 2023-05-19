@@ -1,0 +1,22 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'org.example.Application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation project(':homework-2-common')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}

@@ -4,6 +4,7 @@ include(
         "homework-1",
         "homework-2-encryption",
         "homework-2-decryption",
-        "homework-2-common"
+        "homework-2-common",
+        "homework-3"
 )
 
