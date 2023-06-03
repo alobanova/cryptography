@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+application {
+    mainClass = 'org.example.EncryptionApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    options.compilerArgs += ['--add-exports=java.base/sun.security.x509=ALL-UNNAMED',
+                             '--add-exports=java.base/sun.security.tools.keytool=ALL-UNNAMED']
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation project(':homework-2-common')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
